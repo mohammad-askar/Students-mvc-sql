@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<BorderPane
+        xmlns="http://javafx.com/javafx/21"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="app.StudentViewController">
+    <top>
+        <HBox spacing="8" >
+            <padding>
+                <Insets topRightBottomLeft="8"/>
+            </padding>
+            <TextField fx:id="nameField" promptText="Name"/>
+            <Button text="add" onAction="#onAdd"/>
+            <TextField fx:id="searchFiled" promptText="Search by Name"/>
+            <Button text="Search" onAction="#onSearch"/>
+            <Button text="reset" onAction="#onReset"/>
+            <TextField fx:id="idField" promptText="Find by ID"/>
+            <Button text="Show by ID" onAction="#onShowById"/>
+            <Button text="Delete" onAction="#onDelete"/>
+        </HBox>
+    </top>
+    <center>
+    <TableView fx:id="table">
+        <columns>
+            <TableColumn fx:id="idColumn" text="Id" prefWidth="90">
+
+            </TableColumn>
+            <TableColumn fx:id="nameColumn" text="Name" prefWidth="200">
+
+            </TableColumn>
+        </columns>
+    </TableView>
+    </center>
+
+    <bottom>
+        <Label fx:id="status">
+            <padding>
+                <Insets topRightBottomLeft="8"/>
+            </padding>
+        </Label>
+    </bottom>
+
+</BorderPane>
